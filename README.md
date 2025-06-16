@@ -136,3 +136,26 @@ Line  2 :  It contains multiple lines.
 If the file does not exist:
 
 Error: The file 'sample.txt' was not found.
+
+# Task 2: Write and Append Data to a File
+ 
+**Problem Statement: Write a Python program that:**
+1.   Takes user input and writes it to a file named output.txt.
+2.   Appends additional data to the same file.
+3.   Reads and displays the final content of the file.
+
+**Expected Output:**
+
+Enter text to write to the file: Hello, Python!
+
+Data successfully written to output.txt.
+
+Enter additional text to append: Learning file handling in Python.
+
+Data successfully appended.
+
+Final content of output.txt:
+
+Hello, Python!
+
+Learning file handling in Python.
