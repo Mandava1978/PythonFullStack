@@ -89,6 +89,10 @@ The sum of numbers from 1 to 50 is:  1275
 
 For example, if the function is called with 5, it should return:
 
+Enter a Number: 5
+
+Factorial of  5  is:  120
+
 # Task 2: Using the Math Module for Calculations
  
 **Problem Statement: Write a Python program that:**
@@ -102,4 +106,12 @@ o   Sine of the number (in radians)
  **Expected Output:**
 
  For example, if the user enters 25, the output should be:
+
+Enter a number: 25
+
+square root:  5.0
+
+Logarithm:  3.2188758248682006
+
+Sine:  -0.13235175009777303
 
