@@ -55,7 +55,13 @@ Hello, John Doe! Welcome to the Python Program.
 **Expected Output:**
 
 The program should return an output like:
+Enter a Number: 7
 
+7  is an odd number.
+
+Enter a Number: 12
+
+12  is an even number.
 
 # Task 2: Sum of Integers from 1 to 50 Using a Loop
  
@@ -68,3 +74,4 @@ The program should return an output like:
 
 The program should return:
 
+The sum of numbers from 1 to 50 is:  1275
