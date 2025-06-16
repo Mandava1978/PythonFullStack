@@ -25,7 +25,7 @@ with open("output.txt", "w") as file:
 print("Data successfully written to output.txt.")
 
 # Step 2: Append additional data to the same file
-additional_input = input("Enter additional text to append: ")
+additional_input = input("\nEnter additional text to append: ")
 
 with open("output.txt", "a") as file:
     file.write(additional_input + "\n")
