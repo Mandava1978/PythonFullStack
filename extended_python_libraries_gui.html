@@ -1,0 +1,476 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Python Libraries Reference (Extended)</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            background: #f9f9f9;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    background: white;
+    border: 2px solid #333; /* 🔲 Adds full outer border */
+    box-shadow: 0 0 5px rgba(0,0,0,0.1); /* Optional: light shadow */
+}
+
+th, td {
+    border: 1px solid #ddd; /* Inner cell borders */
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: #f0f0f0;
+}
+
+        h2 {
+            background: #007acc;
+            color: white;
+            padding: 10px;
+        }
+        h2:nth-of-type(1)  { background-color: #007acc; }  /* Machine Learning & AI */
+h2:nth-of-type(2)  { background-color: #d35400; }  /* Data Science & Analysis */
+h2:nth-of-type(3)  { background-color: #27ae60; }  /* Data Cleaning & Manipulation */
+h2:nth-of-type(4)  { background-color: #8e44ad; }  /* Database Interaction */
+h2:nth-of-type(5)  { background-color: #2c3e50; }  /* Web Development */
+h2:nth-of-type(6)  { background-color: #c0392b; }  /* Testing */
+h2:nth-of-type(7)  { background-color: #16a085; }  /* Automation & Scripting */
+h2:nth-of-type(8)  { background-color: #7f8c8d; }  /* Web Scraping */
+h2:nth-of-type(9)  { background-color: #e67e22; }  /* Cybersecurity & Networking */
+h2:nth-of-type(10) { background-color: #2980b9; }  /* Package Management */
+h2:nth-of-type(11) { background-color: #f39c12; }  /* File & OS Operations */
+h2:nth-of-type(12) { background-color: #9b59b6; }  /* PDF, Excel, etc */
+h2:nth-of-type(13) { background-color: #e74c3c; }  /* Image Processing */
+h2:nth-of-type(14) { background-color: #1abc9c; }  /* Audio & Speech */
+h2:nth-of-type(15) { background-color: #34495e; }  /* Video Processing */
+h2:nth-of-type(16) { background-color: #2ecc71; }  /* Game Development */
+h2:nth-of-type(17) { background-color: #3498db; }  /* GUI Development */
+h2:nth-of-type(18) { background-color: #95a5a6; }  /* Cloud / DevOps */
+h2:nth-of-type(19) { background-color: #f1c40f; }  /* Math / Scientific Computing */
+h2:nth-of-type(20) { background-color: #e84393; }  /* Feature Engineering */
+h2:nth-of-type(21) { background-color: #6c5ce7; }  /* Serialization */
+h2:nth-of-type(22) { background-color: #ff6f61; }  /* Deep Learning */
+h2:nth-of-type(23) { background-color: #55efc4; }  /* NLP */
+h2:nth-of-type(24) { background-color: #ffeaa7; }  /* Concurrency */
+h2:nth-of-type(25) { background-color: #fab1a0; }  /* AI */
+h2:nth-of-type(26) { background-color: #636e72; }  /* Tools */
+h2:nth-of-type(27) { background-color: #d63031; }  /* Validation */
+h2:nth-of-type(28) { background-color: #00b894; }  /* CLI */
+h2:nth-of-type(29) { background-color: #fd79a8; }  /* Date/Time */
+/*
+h2:nth-of-type(1) { background-color: #1abc9c; }
+h2:nth-of-type(2) { background-color: #2ecc71; }
+h2:nth-of-type(3) { background-color: #3498db; }
+h2:nth-of-type(4) { background-color: #9b59b6; }
+h2:nth-of-type(5) { background-color: #34495e; }
+h2:nth-of-type(6) { background-color: #16a085; }
+h2:nth-of-type(7) { background-color: #27ae60; }
+h2:nth-of-type(8) { background-color: #2980b9; }
+h2:nth-of-type(9) { background-color: #8e44ad; }
+h2:nth-of-type(10) { background-color: #2c3e50; }
+
+h2:nth-of-type(11) { background-color: #f1c40f; }
+h2:nth-of-type(12) { background-color: #e67e22; }
+h2:nth-of-type(13) { background-color: #e74c3c; }
+h2:nth-of-type(14) { background-color: #ecf0f1; color: black; }
+h2:nth-of-type(15) { background-color: #95a5a6; }
+h2:nth-of-type(16) { background-color: #f39c12; }
+h2:nth-of-type(17) { background-color: #d35400; }
+h2:nth-of-type(18) { background-color: #c0392b; }
+h2:nth-of-type(19) { background-color: #bdc3c7; color: black; }
+h2:nth-of-type(20) { background-color: #7f8c8d; }
+
+h2:nth-of-type(21) { background-color: #ff6f61; }
+h2:nth-of-type(22) { background-color: #6a0572; }
+h2:nth-of-type(23) { background-color: #ab83a1; }
+h2:nth-of-type(24) { background-color: #007acc; }
+h2:nth-of-type(25) { background-color: #ffb400; }
+h2:nth-of-type(26) { background-color: #ffa69e; }
+h2:nth-of-type(27) { background-color: #b8e994; }
+h2:nth-of-type(28) { background-color: #6c5ce7; } 
+h2:nth-of-type(29) { background-color: #fdcb6e; } */
+h2:nth-of-type(30) { background-color: #00cec9; }
+
+h2:nth-of-type(31) { background-color: #fab1a0; }
+h2:nth-of-type(32) { background-color: #ffeaa7; }
+h2:nth-of-type(33) { background-color: #a29bfe; }
+h2:nth-of-type(34) { background-color: #55efc4; }
+h2:nth-of-type(35) { background-color: #ff7675; }
+h2:nth-of-type(36) { background-color: #dfe6e9; color: black; }
+h2:nth-of-type(37) { background-color: #636e72; }
+h2:nth-of-type(38) { background-color: #00b894; }
+h2:nth-of-type(39) { background-color: #fd79a8; }
+h2:nth-of-type(40) { background-color: #e84393; }
+
+h2:nth-of-type(41) { background-color: #00a8ff; }
+h2:nth-of-type(42) { background-color: #9c88ff; }
+h2:nth-of-type(43) { background-color: #fbc531; }
+h2:nth-of-type(44) { background-color: #4cd137; }
+h2:nth-of-type(45) { background-color: #487eb0; }
+h2:nth-of-type(46) { background-color: #e1b12c; }
+h2:nth-of-type(47) { background-color: #c23616; }
+h2:nth-of-type(48) { background-color: #dcdde1; color: black; }
+h2:nth-of-type(49) { background-color: #2f3640; }
+h2:nth-of-type(50) { background-color: #40739e; }
+
+h2:nth-of-type(51) { background-color: #718093; }
+h2:nth-of-type(52) { background-color: #f5f6fa; color: black; }
+h2:nth-of-type(53) { background-color: #192a56; }
+h2:nth-of-type(54) { background-color: #273c75; }
+h2:nth-of-type(55) { background-color: #7bed9f; }
+h2:nth-of-type(56) { background-color: #70a1ff; }
+h2:nth-of-type(57) { background-color: #5352ed; }
+h2:nth-of-type(58) { background-color: #ff4757; }
+h2:nth-of-type(59) { background-color: #2ed573; }
+h2:nth-of-type(60) { background-color: #1e90ff; }
+
+    </style>
+    <!-- <script>
+        function searchTable() {
+            const input = document.getElementById("search").value.toLowerCase();
+            const tables = document.querySelectorAll("table");
+            for (let table of tables) {
+                let rows = table.querySelectorAll("tr:not(:first-child)");
+                for (let row of rows) {
+                    row.style.display = row.innerText.toLowerCase().includes(input) ? "" : "none";
+                }
+            }
+        }
+    </script> -->
+    <script>
+    function searchTable() {
+        const input = document.getElementById("search").value.toLowerCase();
+        const tables = document.querySelectorAll("table");
+        const headings = document.querySelectorAll("h2");
+
+        tables.forEach((table, index) => {
+            let hasVisibleRow = false;
+            const rows = table.querySelectorAll("tr:not(:first-child)");
+
+            rows.forEach(row => {
+                const match = row.innerText.toLowerCase().includes(input);
+                row.style.display = match ? "" : "none";
+                if (match) hasVisibleRow = true;
+            });
+
+            // Show/hide table and corresponding heading based on matches
+            table.style.display = hasVisibleRow ? "table" : "none";
+            if (headings[index]) {
+                headings[index].style.display = hasVisibleRow ? "block" : "none";
+            }
+        });
+    }
+</script>
+
+</head>
+<body>
+    <h1>🧰 Python Libraries Explorer (Extended)</h1>
+    <input type="text" id="search" placeholder="Search for a library..." onkeyup="searchTable()">
+    <h2>Machine Learning & AI</h2>
+    <table><tr><th>Library</th><th>Description</th><th>Install Command</th></tr><tr><td>scikit-learn</td><td>Machine learning tools for data mining and analysis.</td><td><code>pip install scikit-learn</code></td></tr><tr><td>tensorflow</td><td>Deep learning framework by Google</td><td><code>pip install tensorflow</code></td></tr><tr><td>keras</td><td>High-level neural networks API running on TensorFlow.</td><td><code>pip install keras</code></td></tr><tr><td>pytorch</td><td>Deep learning framework by Facebook</td><td><code>pip install torch</code></td></tr><tr><td>xgboost</td><td>Gradient boosting library</td><td><code>pip install xgboost</code></td></tr><tr><td>lightgbm</td><td>Fast gradient boosting framework</td><td><code>pip install lightgbm</code></td></tr><tr><td>catboost</td><td>Gradient boosting with categorical support</td><td><code>pip install catboost</code></td></tr><tr><td>transformers</td><td>State-of-the-art NLP models</td><td><code>pip install transformers</code></td></tr></table>
+    <h2>Data Science & Analysis</h2>
+    <table><tr><th>Library</th><th>Description</th><th>Install Command</th></tr><tr><td>pandas</td><td>Data manipulation and analysis tool.</td><td><code>pip install pandas</code></td></tr><tr><td>numpy</td><td>Support for large, multi-dimensional arrays and matrices.</td><td><code>pip install numpy</code></td></tr><tr><td>scipy</td><td>Library for mathematics, science, and engineering.</td><td><code>pip install scipy</code></td></tr><tr><td>statsmodels</td><td>Statistical modeling and tests</td><td><code>pip install statsmodels</code></td></tr><tr><td>seaborn</td><td>Statistical data visualization built on Matplotlib.</td><td><code>pip install seaborn</code></td></tr><tr><td>matplotlib</td><td>2D plotting library for Python.</td><td><code>pip install matplotlib</code></td></tr><tr><td>plotly</td><td>Interactive graphing library for Python.</td><td><code>pip install plotly</code></td></tr><tr><td>bokeh</td><td>	Interactive visualization library for web browsers.</td><td><code>pip install bokeh</code></td></tr><tr><td>Dask</td><td>Parallel computing for analytics</td><td><code>pip install dask</code></td></tr><tr><td>Vaex</td><td>Out-of-core DataFrames</td><td><code>pip install vaex</code></td></tr><tr><td>Datatable</td><td>High-performance data structures</td><td><code>pip install datatable</code></td></tr></table>
+    <h2>Data Cleaning & Manipulation</h2>
+    <table><tr><th>Library</th><th>Description</th><th>Install Command</th></tr><tr><td>openpyxl</td><td>Read/write Excel files</td><td><code>pip install openpyxl</code></td></tr><tr><td>xlrd</td><td>Read Excel files</td><td><code>pip install xlrd</code></td></tr><tr><td>xlwt</td><td>Write Excel files</td><td><code>pip install xlwt</code></td></tr><tr><td>pyjanitor</td><td>Clean APIs for data cleaning</td><td><code>pip install pyjanitor</code></td></tr><tr><td>tabulate</td><td>Pretty-print tabular data</td><td><code>pip install tabulate</code></td></tr><tr><td>pyarrow</td><td>Apache Arrow support</td><td><code>pip install pyarrow</code></td></tr></table>
+    <h2>Database Interaction</h2>
+    <table><tr><th>Library</th><th>Description</th><th>Install Command</th></tr><tr><td>sqlalchemy</td><td>SQL toolkit and ORM</td><td><code>pip install sqlalchemy</code></td></tr><tr><td>pymysql</td><td>MySQL driver</td><td><code>pip install pymysql</code></td></tr><tr><td>psycopg2</td><td>PostgreSQL adapter</td><td><code>pip install psycopg2</code></td></tr><tr><td>sqlite3</td><td>SQLite DB (built-in)</td><td><code>(built-in)</code></td></tr><tr><td>mongoengine</td><td>MongoDB ORM</td><td><code>pip install mongoengine</code></td></tr><tr><td>pymongo</td><td>MongoDB driver</td><td><code>pip install pymongo</code></td></tr><tr><td>redis-py</td><td>Redis client</td><td><code>pip install redis</code></td></tr></table>
+    <h2>Web Development</h2>
+    <table><tr><th>Library</th><th>Description</th><th>Install Command</th></tr><tr><td>flask</td><td>Lightweight web framework</td><td><code>pip install flask</code></td></tr><tr><td>django</td><td>Full-featured web framework</td><td><code>pip install django</code></td></tr><tr><td>fastapi</td><td>Modern, fast web framework</td><td><code>pip install fastapi</code></td></tr><tr><td>tornado</td><td>Web server and framework</td><td><code>pip install tornado</code></td></tr><tr><td>aiohttp</td><td>Async HTTP client/server</td><td><code>pip install aiohttp</code></td></tr><tr><td>requests</td><td>Simple HTTP requests</td><td><code>pip install requests</code></td></tr><tr><td>httpx</td><td>Async HTTP client</td><td><code>pip install httpx</code></td></tr><tr><td>flask-restful</td><td>REST API extension for Flask</td><td><code>pip install flask-restful</code></td></tr><tr><td>graphene</td><td>GraphQL for Python</td><td><code>pip install graphene</code></td></tr></table>
+    <h2>Testing</h2>
+    <table><tr><th>Library</th><th>Description</th><th>Install Command</th></tr><tr><td>unittest</td><td>Built-in testing framework</td><td><code>(built-in)</code></td></tr><tr><td>pytest</td><td>Powerful test framework</td><td><code>pip install pytest</code></td></tr><tr><td>nose2</td><td>Successor to nose</td><td><code>pip install nose2</code></td></tr><tr><td>tox</td><td>Test environments manager</td><td><code>pip install tox</code></td></tr></table>
+    <h2>Automation & Scripting</h2>
+    <table><tr><th>Library</th><th>Description</th><th>Install Command</th></tr><tr><td>pyautogui</td><td>GUI automation</td><td><code>pip install pyautogui</code></td></tr><tr><td>selenium</td><td>Web automation</td><td><code>pip install selenium</code></td></tr><tr><td>pywinauto</td><td>Windows GUI automation</td><td><code>pip install pywinauto</code></td></tr><tr><td>beautifulsoup4</td><td>HTML parsing</td><td><code>pip install beautifulsoup4</code></td></tr><tr><td>scrapy</td><td>Web scraping</td><td><code>pip install scrapy</code></td></tr></table>
+    <h2>Web Scraping</h2>
+    <table><tr><th>Library</th><th>Description</th><th>Install Command</th></tr><tr><td>beautifulsoup4</td><td>HTML parser</td><td><code>pip install beautifulsoup4</code></td></tr><tr><td>scrapy</td><td>Advanced web scraping</td><td><code>pip install scrapy</code></td></tr><tr><td>lxml</td><td>XML and HTML parsing</td><td><code>pip install lxml</code></td></tr><tr><td>selenium</td><td>Browser automation</td><td><code>pip install selenium</code></td></tr><tr><td>httpx</td><td>HTTP client</td><td><code>pip install httpx</code></td></tr></table>
+    <h2>Cybersecurity & Networking</h2>
+    <table><tr><th>Library</th><th>Description</th><th>Install Command</th></tr><tr><td>socket</td><td>Low-level networking</td><td><code>(built-in)</code></td></tr><tr><td>paramiko</td><td>SSH2 protocol library</td><td><code>pip install paramiko</code></td></tr><tr><td>scapy</td><td>Packet manipulation tool</td><td><code>pip install scapy</code></td></tr><tr><td>nmap</td><td>Port scanner</td><td><code>pip install python-nmap</code></td></tr><tr><td>twisted</td><td>Event-driven networking</td><td><code>pip install twisted</code></td></tr></table>
+    <h2>Package Management & Virtual Environments</h2>
+    <table><tr><th>Library</th><th>Description</th><th>Install Command</th></tr><tr><td>pip</td><td>Python package installer</td><td><code>(built-in)</code></td></tr><tr><td>setuptools</td><td>Build and distribution</td><td><code>pip install setuptools</code></td></tr><tr><td>poetry</td><td>Dependency manager</td><td><code>pip install poetry</code></td></tr><tr><td>virtualenv</td><td>Virtual environment tool</td><td><code>pip install virtualenv</code></td></tr><tr><td>conda</td><td>Package and env manager</td><td><code>conda install conda</code></td></tr></table>
+    <h2>File & OS Operations</h2>
+    <table><tr><th>Library</th><th>Description</th><th>Install Command</th></tr><tr><td>os</td><td>OS operations</td><td><code>(built-in)</code></td></tr><tr><td>shutil</td><td>File operations</td><td><code>(built-in)</code></td></tr><tr><td>pathlib</td><td>Object-oriented paths</td><td><code>(built-in)</code></td></tr><tr><td>glob</td><td>File pattern matching</td><td><code>(built-in)</code></td></tr><tr><td>zipfile</td><td>Zip file handling</td><td><code>(built-in)</code></td></tr></table>
+    <h2>PDF, Excel, Word, and Docs</h2>
+    <table><tr><th>Library</th><th>Description</th><th>Install Command</th></tr><tr><td>python-docx</td><td>Read/write Word files</td><td><code>pip install python-docx</code></td></tr><tr><td>openpyxl</td><td>Read/write Excel files</td><td><code>pip install openpyxl</code></td></tr><tr><td>pdfplumber</td><td>Extract text from PDFs</td><td><code>pip install pdfplumber</code></td></tr><tr><td>PyPDF2</td><td>PDF manipulation</td><td><code>pip install PyPDF2</code></td></tr><tr><td>reportlab</td><td>Create PDFs</td><td><code>pip install reportlab</code></td></tr></table>
+    <h2>Image Processing</h2>
+    <table><tr><th>Library</th><th>Description</th><th>Install Command</th></tr><tr><td>Pillow</td><td>Image manipulation</td><td><code>pip install Pillow</code></td></tr><tr><td>opencv-python</td><td>Computer vision</td><td><code>pip install opencv-python</code></td></tr><tr><td>imageio</td><td>Read/write images</td><td><code>pip install imageio</code></td></tr><tr><td>scikit-image</td><td>Image processing toolkit</td><td><code>pip install scikit-image</code></td></tr></table>
+    <h2>Audio & Speech</h2>
+    <table><tr><th>Library</th><th>Description</th><th>Install Command</th></tr><tr><td>pyaudio</td><td>Audio I/O</td><td><code>pip install pyaudio</code></td></tr><tr><td>speechrecognition</td><td>Speech to text</td><td><code>pip install SpeechRecognition</code></td></tr><tr><td>librosa</td><td>Music analysis</td><td><code>pip install librosa</code></td></tr><tr><td>soundfile</td><td>Read/write sound files</td><td><code>pip install soundfile</code></td></tr></table>
+    <h2>Video Processing</h2>
+    <table><tr><th>Library</th><th>Description</th><th>Install Command</th></tr><tr><td>opencv-python</td><td>Video and image analysis</td><td><code>pip install opencv-python</code></td></tr><tr><td>moviepy</td><td>Video editing</td><td><code>pip install moviepy</code></td></tr><tr><td>imageio</td><td>Image and video I/O</td><td><code>pip install imageio</code></td></tr></table>
+    <h2>Game Development</h2>
+    <table><tr><th>Library</th><th>Description</th><th>Install Command</th></tr><tr><td>pygame</td><td>Game development</td><td><code>pip install pygame</code></td></tr><tr><td>panda3d</td><td>3D game engine</td><td><code>pip install panda3d</code></td></tr><tr><td>ursina</td><td>Game engine wrapper</td><td><code>pip install ursina</code></td></tr></table>
+    <h2>GUI Development</h2>
+    <table><tr><th>Library</th><th>Description</th><th>Install Command</th></tr><tr><td>tkinter</td><td>Standard GUI library</td><td><code>(built-in)</code></td></tr><tr><td>PyQt5</td><td>Qt GUI library</td><td><code>pip install PyQt5</code></td></tr><tr><td>PySide6</td><td>Official Qt bindings</td><td><code>pip install PySide6</code></td></tr><tr><td>kivy</td><td>Modern UI framework</td><td><code>pip install kivy</code></td></tr><tr><td>wxPython</td><td>Native GUI library</td><td><code>pip install wxPython</code></td></tr></table>
+    <h2>Cloud / DevOps</h2>
+    <table><tr><th>Library</th><th>Description</th><th>Install Command</th></tr><tr><td>boto3</td><td>AWS SDK for Python</td><td><code>pip install boto3</code></td></tr><tr><td>google-cloud</td><td>Google Cloud SDK</td><td><code>pip install google-cloud</code></td></tr><tr><td>azure</td><td>Microsoft Azure SDK</td><td><code>pip install azure</code></td></tr><tr><td>docker</td><td>Docker SDK</td><td><code>pip install docker</code></td></tr><tr><td>fabric</td><td>SSH command execution</td><td><code>pip install fabric</code></td></tr></table>
+    <h2>Math / Scientific Computing</h2>
+    <table><tr><th>Library</th><th>Description</th><th>Install Command</th></tr><tr><td>sympy</td><td>Symbolic mathematics</td><td><code>pip install sympy</code></td></tr><tr><td>numpy</td><td>Numerical computation</td><td><code>pip install numpy</code></td></tr><tr><td>scipy</td><td>Scientific computing</td><td><code>pip install scipy</code></td></tr></table>
+    <h2>Feature Engineering & Data Prep</h2>
+    <table><tr><th>Library</th><th>Description</th><th>Install Command</th></tr><tr><td>Featuretools</td><td>Automated feature engineering</td><td><code>pip install featuretools</code></td></tr><tr><td>Category Encoders</td><td>Encoding categorical variables</td><td><code>pip install category_encoders</code></td></tr><tr><td>missingno</td><td>Missing data visualization</td><td><code>pip install missingno</code></td></tr></table>
+    <h2>Serialization / Data Formats</h2>
+    <table><tr><th>Library</th><th>Description</th><th>Install Command</th></tr><tr><td>msgpack</td><td>Binary JSON format</td><td><code>pip install msgpack</code></td></tr><tr><td>orjson</td><td>Ultra-fast JSON</td><td><code>pip install orjson</code></td></tr><tr><td>h5py</td><td>HDF5 binary format support</td><td><code>pip install h5py</code></td></tr></table>
+    <h2>Deep Learning / AI</h2>
+    <table><tr><th>Library</th><th>Description</th><th>Install Command</th></tr><tr><td>onnx</td><td>Open Neural Network Exchange format</td><td><code>pip install onnx</code></td></tr><tr><td>onnxruntime</td><td>Runtime for ONNX models</td><td><code>pip install onnxruntime</code></td></tr><tr><td>DeepChem</td><td>Machine learning for drug discovery</td><td><code>pip install deepchem</code></td></tr><tr><td>fastai</td><td>High-level deep learning API</td><td><code>pip install fastai</code></td></tr></table>
+    <h2>NLP (Natural Language Processing)</h2>
+    <table><tr><th>Library</th><th>Description</th><th>Install Command</th></tr><tr><td>spaCy</td><td>Industrial-strength NLP</td><td><code>pip install spacy</code></td></tr><tr><td>nltk</td><td>Natural Language Toolkit</td><td><code>pip install nltk</code></td></tr><tr><td>textblob</td><td>Simplified text processing</td><td><code>pip install textblob</code></td></tr><tr><td>gensim</td><td>Topic modeling and word embeddings</td><td><code>pip install gensim</code></td></tr></table>
+    <h2>Concurrency / Performance</h2>
+    <table><tr><th>Library</th><th>Description</th><th>Install Command</th></tr><tr><td>joblib</td><td>Lightweight parallel computing</td><td><code>pip install joblib</code></td></tr><tr><td>numba</td><td>JIT compiler for numerical functions</td><td><code>pip install numba</code></td></tr><tr><td>cython</td><td>Compile Python to C for speed</td><td><code>pip install cython</code></td></tr></table>
+    <h2>Time Series / Financial</h2>
+    <table><tr><th>Library</th><th>Description</th><th>Install Command</th></tr><tr><td>prophet</td><td>Forecasting from Meta</td><td><code>pip install prophet</code></td></tr><tr><td>statsforecast</td><td>Fast time series forecasting</td><td><code>pip install statsforecast</code></td></tr><tr><td>backtrader</td><td>Backtesting trading strategies</td><td><code>pip install backtrader</code></td></tr></table>
+    <h2>Development Tools</h2>
+    <table><tr><th>Library</th><th>Description</th><th>Install Command</th></tr><tr><td>black</td><td>Code formatter</td><td><code>pip install black</code></td></tr><tr><td>flake8</td><td>Code linter</td><td><code>pip install flake8</code></td></tr><tr><td>mypy</td><td>Static type checker</td><td><code>pip install mypy</code></td></tr><tr><td>pre-commit</td><td>Git hooks for code quality</td><td><code>pip install pre-commit</code></td></tr></table>
+    <h2>Streaming / Messaging</h2>
+    <table><tr><th>Library</th><th>Description</th><th>Install Command</th></tr><tr><td>kafka-python</td><td>Apache Kafka client</td><td><code>pip install kafka-python</code></td></tr><tr><td>pika</td><td>RabbitMQ client</td><td><code>pip install pika</code></td></tr><tr><td>pyzmq</td><td>ZeroMQ messaging</td><td><code>pip install pyzmq</code></td></tr></table>
+
+    <h2>Concurrency</h2>
+    <table>
+        <tr><th>Library</th>
+            <th>Description</th>
+            <th>Install Command</th>
+        </tr>
+        <tr>
+            <td>Asyncio</td>
+            <td>Asynchronous I/O support in Python.</td>
+            <td><code>(built-in with Python 3.4+)</code></td>
+        </tr>
+        <tr>
+            <td>Multiprocessing</td>
+            <td>Process-based parallelism in Python.</td>
+            <td><code>(built-in with Python)</code></td>
+        </tr>
+        <tr>
+            <td>Threading</td>
+            <td>Thread-based parallelism in Python.</td>
+            <td><code>(built-in with Python)</code></td>
+        </tr>
+    </table>
+    <h2>AI</h2>
+    <table>
+        <tr>
+            <th>Library</th>
+            <th>Description</th>
+            <th>Install Command</th>
+        </tr>       
+        <tr>
+            <td>OpenAI GPT-3</td>
+            <td>Generative Pretrained Transformer by OpenAI.</td>
+            <td><code>pip install openai</code></td>
+        </tr>
+    </table>  
+    <h2>Tools</h2>
+    <table>
+        <tr>
+            <th>Library</th>
+            <th>Description</th>
+            <th>Install Command</th>
+        </tr>
+        <tr>
+            <td>Jupyter</td>
+            <td>Web-based interactive computing notebook.</td>
+            <td><code>pip install notebook</code></td>
+        </tr>
+        <tr>
+            <td>Anaconda</td>
+            <td>Distribution of Python for scientific computing.</td>
+            <td><code>https://www.anaconda.com/products/distribution</code></td>
+        </tr>
+       
+    </table>
+  		
+    <h2>Validation</h2>
+    <table>
+        <tr>
+            <th>Library</th>
+            <th>Description</th>
+            <th>Install Command</th>
+        </tr>        
+        <tr>
+            <td>Pydantic</td>
+            <td>Data validation and settings management using Python type hints.</td>
+            <td><code>pip install pydantic</code></td>
+        </tr>
+    </table>
+
+    <h2>CLI</h2>
+    <table>
+        <tr>
+            <th>Library</th>
+            <th>Description</th>
+            <th>Install Command</th>
+        </tr>
+        <tr>
+            <td>Typer</td>
+            <td>Build CLI apps with ease using type hints.</td>
+            <td><code>pip install typer</code></td>
+        </tr>        
+    </table>
+ 
+    <h2>Date/Time</h2>
+    <table>
+        <tr>
+            <th>Library</th>
+            <th>Description</th>
+            <th>Install Command</th>
+        </tr>
+        <tr>
+            <td>Arrow</td>
+            <td>Better dates & times for Python.</td>
+            <td><code>pip install arrow</code></td>
+        </tr>
+        <tr>
+            <td>Pendulum</td>
+            <td>Python datetimes made easy.</td>
+            <td><code>pip install pendulum</code></td>
+        </tr>
+        
+    </table>
+        <h2>Machine Learning & AI</h2>
+    <table>
+        <tr><th>Library</th><th>Description</th><th>Install Command</th></tr>
+        <tr><td>datasets</td><td>A library for accessing and sharing datasets for machine learning, particularly for NLP tasks.</td><td><code>pip install datasets</code></td></tr>
+        <tr><td>optuna</td><td>A hyperparameter optimization framework for machine learning models.</td><td><code>pip install optuna</code></td></tr>
+    </table>
+
+    <h2>Data Science & Analysis</h2>
+    <table>
+        <tr><th>Library</th><th>Description</th><th>Install Command</th></tr>
+        <tr><td>polars</td><td>A fast DataFrame library implemented in Rust, designed for high-performance data manipulation.</td><td><code>pip install polars</code></td></tr>
+        <tr><td>sweetviz</td><td>Automated exploratory data analysis with visualizations for datasets.</td><td><code>pip install sweetviz</code></td></tr>
+    </table>
+
+    <h2>Data Cleaning & Manipulation</h2>
+    <table>
+        <tr><th>Library</th><th>Description</th><th>Install Command</th></tr>
+        <tr><td>great_expectations</td><td>A library for validating, documenting, and profiling data to ensure quality.</td><td><code>pip install great_expectations</code></td></tr>
+    </table>
+
+    <h2>Database Interaction</h2>
+    <table>
+        <tr><th>Library</th><th>Description</th><th>Install Command</th></tr>
+        <tr><td>sqlmodel</td><td>Combines SQLAlchemy with Pydantic for type-safe database interactions  .</td><td><code>pip install sqlmodel</code></td></tr>
+    </table>
+
+    <h2>Web Development</h2>
+    <table>
+        <tr><th>Library</th><th>Description</th><th>Install Command</th></tr>
+        <tr><td>starlette</td><td>A lightweight ASGI framework/toolkit, which is the foundation for FastAPI.</td><td><code>pip install starlette</code></td></tr>
+        <tr><td>uvicorn</td><td>An ASGI web server implementation for Python, often used with FastAPI.</td><td><code>pip install uvicorn</code></td></tr>
+    </table>
+
+    <h2>Testing</h2>
+    <table>
+        <tr><th>Library</th><th>Description</th><th>Install Command</th></tr>
+        <tr><td>hypothesis</td><td>A property-based testing library for Python.</td><td><code>pip install hypothesis</code></td></tr>
+    </table>
+
+    <h2>Automation & Scripting</h2>
+    <table>
+        <tr><th>Library</th><th>Description</th><th>Install Command</th></tr>
+        <tr><td>click</td><td>A package for creating beautiful command-line interfaces in Python.</td><td><code>pip install click</code></td></tr>
+    </table>
+
+    <h2>Web Scraping</h2>
+    <table>
+        <tr><th>Library</th><th>Description</th><th>Install Command</th></tr>
+        <tr><td>requests-html</td>	<td>HTML parsing, JavaScript rendering, and scraping with a simple API.</td><td><code>pip install requests-html</code></td></tr>
+    </table>
+
+    <h2>Cybersecurity & Networking</h2>
+    <table>
+        <tr><th>Library</th><th>Description</th><th>Install Command</th></tr>
+        <tr><td>impacket</td><td>A collection of Python classes for working with network protocols, often used in security research.</td><td><code>pip install impacket</code></td></tr>
+    </table>
+
+    <h2>Package Management & Virtual Environments</h2>
+    <table>
+        <tr><th>Library</th><th>Description</th><th>Install Command</th></tr>
+        <tr><td>pipenv</td><td>A dependency manager that combines pip and virtualenv for project management.</td><td><code>pip install pipenv</code></td></tr>
+    </table>
+
+    <h2>File & OS Operations</h2>
+    <table>
+        <tr><th>Library</th><th>Description</th><th>Install Command</th></tr>
+        <tr><td>watchdog</td><td>A library for monitoring file system events.</td><td><code>pip install watchdog</code></td></tr>
+    </table>
+
+    <h2>PDF, Excel, Word, and Docs</h2>
+    <table>
+        <tr><th>Library</th><th>Description</th><th>Install Command</th></tr>
+        <tr><td>XlsxWriter</td><td>A library for creating Excel files with advanced formatting and charts.</td><td><code>pip install XlsxWriter</code></td></tr>
+    </table>
+
+    <h2>Image Processing</h2>
+    <table>
+        <tr><th>Library</th><th>Description</th><th>Install Command</th></tr>
+        <tr><td>pytesseract</td><td>A wrapper for Google’s Tesseract-OCR Engine for optical character recognition (OCR).</td><td><code>pip install pytesseract</code></td></tr>
+    </table>
+
+    <h2>Audio & Speech</h2>
+    <table>
+        <tr><th>Library</th><th>Description</th><th>Install Command</th></tr>
+        <tr><td>gTTS</td><td>Google Text-to-Speech library to convert text to spoken audio.</td><td><code>pip install gTTS</code></td></tr>
+    </table>
+
+    <h2>Game Development</h2>
+    <table>
+        <tr><th>Library</th><th>Description</th><th>Install Command</th></tr>
+        <tr><td>arcade</td><td>A modern Python framework for crafting 2D games with easy-to-use APIs.</td><td><code>pip install arcade</code></td></tr>
+    </table>
+
+    <h2>GUI Development</h2>
+    <table>
+        <tr><th>Library</th><th>Description</th><th>Install Command</th></tr>
+        <tr><td>dearpygui</td><td>A fast and powerful GUI framework for Python, leveraging GPU rendering.</td><td><code>pip install dearpygui</code></td></tr>
+    </table>
+
+    <h2>Cloud / DevOps</h2>
+    <table>
+        <tr><th>Library</th><th>Description</th><th>Install Command</th></tr>
+        <tr><td>python-terraform</td><td>A Python client for interacting with Terraform, an infrastructure-as-code tool.</td><td><code>pip install python-terraform</code></td></tr>
+    </table>
+
+    <h2>Math / Scientific Computing</h2>
+    <table>
+        <tr><th>Library</th><th>Description</th><th>Install Command</th></tr>
+        <tr><td>numpy-financial</td><td>Financial functions for NumPy, such as NPV and IRR calculations.</td><td><code>pip install numpy-financial</code></td></tr>
+    </table>
+
+    <h2>NLP (Natural Language Processing)</h2>
+    <table>
+        <tr><th>Library</th><th>Description</th><th>Install Command</th></tr>
+        <tr><td>flair</td><td>A powerful NLP library for state-of-the-art models like named entity recognition and sentiment analysis.</td><td><code>pip install flair</code></td></tr>
+    </table>
+
+    <h2>Time Series / Financial</h2>
+    <table>
+        <tr><th>Library</th><th>Description</th><th>Install Command</th></tr>
+        <tr><td>TA-Lib</td><td>Technical analysis library for financial markets.</td><td><code>pip install TA-Lib</code></td></tr>
+    </table>
+
+    <h2>Development Tools</h2>
+    <table>
+        <tr><th>Library</th><th>Description</th><th>Install Command</th></tr>
+        <tr><td>isort</td><td>A tool for sorting Python imports automatically.</td><td><code>pip install isort</code></td></tr>
+    </table>
+
+    <h2>Streaming / Messaging</h2>
+    <table>
+        <tr><th>Library</th><th>Description</th><th>Install Command</th></tr>
+        <tr><td>confluent-kafka</td><td>A Python client for Apache Kafka with additional features from Confluent.</td><td><code>pip install confluent-kafka</code></td></tr>
+    </table>
+   		
+</body>
+</html>
